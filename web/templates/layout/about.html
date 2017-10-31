@@ -1,15 +1,19 @@
+{% load staticfiles %}
+
 <section id="about" class="text">
-    <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="heading">About me</h2>
-            <p class="lead">This can be an about section.</p>
-            <p>Un Parrafo </p>
-            <p>Otro Parrafo</p>
-          </div>
-          <div class="col-md-5 col-md-offset-1">
-            <p><img src="img/japan-mountains.jpg" alt="" class="img-responsive img-circle"></p>
-          </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="heading">About me</h2>
+          <p class="lead">
+            I am a curvy young man usually researching and reading about things that I find interesting, things like Bible, Technology, ML, DL and among other things.
+            I'm usualy reading a book on some of these topics.
+          </p>
+          <p>I have been creating systems in web environments for a long time, taking Python as programming language, for me it is one of the most versatile languages, because you can use it in any field of development.</p>
+        </div>
+        <div class="col-md-5 col-md-offset-1">
+          <p><img src="{% static 'img/x.jpg' %}" alt="" class="img-responsive img-circle"></p>
         </div>
       </div>
-    </section>
+    </div>
+</section>

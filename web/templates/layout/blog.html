@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<section id="blog" class="gallery" style='background-color: #84C3BE;'>
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-xs-6">
+                <h2 class="heading">Blog</h2>
+                <p>Along with the initiative to build this website, it was also to create a blog where I can share some of the things.</p>
+                <p>This area is more than anything an initiative to share with others what I am usually learning, researching or creating.</p>
+                <div class="read-more"><a href="{% url 'blog_home' %}">See Blog</a></div>
+            </div>
+            <div class="col-xs-6">
+                <h2 class="heading">Last Post</h2>
+                <h5><a href="{% url 'blog_detail' view.last_post.pk %}">{{ view.last_post.title }}</a></h5>
+                {% autoescape off %}{{ view.last_post.first_paragraph }}{% endautoescape %}
+            </div>
+        </div>
+    </div>
+</section>

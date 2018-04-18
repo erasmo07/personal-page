@@ -1,7 +1,7 @@
 """
+    Urls
 
-            Urls
-        A clean, elegant URL scheme is an important
+    A clean, elegant URL scheme is an important
     detail in a high-quality Web application.
 
     Django lets you design URLs however you want,
@@ -12,5 +12,5 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^$', views.home)
+    url(r'^$', views.Home.as_view(), name='home')
 ]

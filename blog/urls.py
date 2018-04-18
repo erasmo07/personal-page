@@ -8,9 +8,11 @@
     with no framework limitations.
 """
 from django.conf.urls import url
-from . import views
+from blog import views
 
 
 urlpatterns = [
-    url(r'^$', views.home)
+    url(r'^$', views.BlogListView.as_view(), name='blog_home'),
+    url(r'^(?P<pk>[0-9]+)/$',
+        views.BlogDetailView.as_view(), name='blog_detail')
 ]

@@ -112,3 +112,10 @@ ENV/
 
 # Does not include image file
 *.jpg
+
+*.DS_Store
+*/.DS_Store
+*/**/.DS_Store
+
+# Migrations
+*/migrations/*

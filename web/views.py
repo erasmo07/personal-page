@@ -1,6 +1,7 @@
-from django.shortcuts import render_to_response
+from django.views.generic import TemplateView
+from blog.models import Post
 
-# Create your views here.
 
-def home(request):
-    return render_to_response('index.html')
+class Home(TemplateView):
+    template_name = 'index.html'
+    last_post = Post.objects.last()
